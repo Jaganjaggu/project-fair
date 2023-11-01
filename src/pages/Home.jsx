@@ -11,7 +11,7 @@ function Home() {
                     <Col sm={12} md={6}>
                         <h1 style={{ fontSize: "80px" }} className='fw-bolder text-light'><i className='fa-brands fa-stack-overflow fa-bounce'></i> Project Fair</h1>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem minus eum quaerat! Reprehenderit, veniam, cupiditate magni incidunt perspiciatis, tempore hic ratione quaerat vitae sint temporibus ipsum ducimus fugiat officia eaque.</p>
-                        <button className='btn btn-warning'>Start to explore</button>
+                        <Link to={'/login'} className='btn btn-warning'>Start to explore</Link>
                     </Col>
                     <Col>
                         <img style={{ marginTop: '100px' }} className='w-75' src='https://png.pngtree.com/png-clipart/20210308/original/pngtree-online-collaborative-data-analysis-office-scene-flat-illustration-png-image_5767260.jpg' alt='' />
