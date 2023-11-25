@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addProjectAPI } from '../Services/allAPI';
+import { addProjectResponseContext } from '../Contexts/ContextShare';
 
 function AddProject() {
+    const {addProjectResponse,setAddProjectResponse} = useContext(addProjectResponseContext)
     const [projectDetails, setProjectDetails] = useState({
         title: "", language: '', website: '', github: '', overview: '', projectImage: ''
     })
-    console.log(projectDetails);
+    // console.log(projectDetails);
     const [preview, setPreview] = useState('')
     const [show, setShow] = useState(false);
     const [token,setToken] = useState('')
@@ -60,7 +62,9 @@ function AddProject() {
                 const result = await addProjectAPI(reqBody, reqHeader)
                 if (result.status === 200) {
                     console.log(result.data);
-    
+                    handleClose()
+                    // alert("Project Added")    
+                    setAddProjectResponse(result.data)
                 }else{
                     console.log(result);
                     console.log(result.response.data);
