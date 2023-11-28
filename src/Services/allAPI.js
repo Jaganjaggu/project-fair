@@ -39,8 +39,12 @@ export const editProjectAPI = async (projectId,reqBody,reqHeader)=>{
     return await commonAPI ("PUT",`${BASE_URL}/projects/edits/${projectId}`,reqBody,reqHeader)
 }
 
-// delete
+// delete project
 export const delteProjectAPI = async (projectId,reqHeader)=>{
     return await commonAPI ("DELETE",`${BASE_URL}/projects/remove/${projectId}`,{},reqHeader)
+}
 
+// edit user
+export const editUserAPI = async (reqBody,reqHeader) => {
+    return await commonAPI ("PUT",`${BASE_URL}/user/edit`,reqBody,reqHeader)
 }

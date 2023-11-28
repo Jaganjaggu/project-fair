@@ -10,8 +10,8 @@ import EditProject from './EditProject';
 
 function MyProjects() {
     const {editProjectResponse,setEditProjectResponse} = useContext(editProjectResponseContext)
+    const {addProjectResponse, setAddProjectResponse } = useContext(addProjectResponseContext)   
 
-    const { addProjectResponse, setAddProjectResponse } = useContext(addProjectResponseContext)
     const [userProjects, setUserProjects] = useState([])
     const getUserProjects = async () => {
         if (sessionStorage.getItem('token')) {
@@ -34,7 +34,7 @@ function MyProjects() {
         getUserProjects()
     }, [addProjectResponse,editProjectResponse])
 
-    const handleDelte = async (id) => {
+    const handleDelete = async (id) => {
         const token = sessionStorage.getItem("token")
         const reqHeader = {
             "Content-Type": "application/json",
@@ -71,7 +71,7 @@ function MyProjects() {
                                 {/* <button className='btn'><i class="fa-solid fa-pen-to-square"></i></button> */}
                                 <EditProject project={project} />
                                 <a href={`${project.github}`} target='_blank' className='btn'><i class="fa-brands fa-github"></i></a>
-                                <button onClick={() => handleDelte(project._id)} className='btn'><i class="fa-solid fa-trash"></i></button>
+                                <button onClick={() => handleDelete(project._id)} className='btn'><i class="fa-solid fa-trash"></i></button>
                             </div>
                         </div>
 
