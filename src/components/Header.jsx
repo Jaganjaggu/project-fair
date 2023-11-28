@@ -28,7 +28,7 @@ function Header({ isDashboard }) {
 
           {/* <button className='btn btn-light'>Logout</button> */}
           {isDashboard &&
-            <button onClick={handleLogout} className="btn btn-linkms-auto text-info fw-bolder fs-5">Logout <i class="fa-solid fa-arrow-right-from-bracket fa-beat-fade"></i></button>
+            <button onClick={handleLogout} className="btn btn-linkms-auto text-info fw-bolder fs-5">Logout <i className="fa-solid fa-arrow-right-from-bracket fa-beat-fade"></i></button>
           
           }
         </Container>

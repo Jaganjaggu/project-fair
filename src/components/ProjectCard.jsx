@@ -39,8 +39,8 @@ function ProjectCard({project}) {
 
                     </Row>
                     <div className='mt-3'>
-                        <a href={project.github} target='_blank' className='me-3 btn'><i class="fa-brands fa-github fa-2x"></i></a>
-                        <a href={project.website} target='_blank' className='me-5 btn'><i class="fa-solid fa-link fa-2x"></i></a>
+                        <a href={project.github} target='_blank' className='me-3 btn'><i className="fa-brands fa-github fa-2x"></i></a>
+                        <a href={project.website} target='_blank' className='me-5 btn'><i className="fa-solid fa-link fa-2x"></i></a>
                     </div>
                 </Modal.Body>
             </Modal>

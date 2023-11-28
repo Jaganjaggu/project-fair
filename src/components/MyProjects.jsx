@@ -24,7 +24,7 @@ function MyProjects() {
             if (result.status === 200) {
                 setUserProjects(result.data)
             } else {
-                console.log(result);
+                // console.log(result);
                 toast.warning(result.response.data)
             }
         }
@@ -50,7 +50,7 @@ function MyProjects() {
         }
     }
 
-    console.log(userProjects)
+    // console.log(userProjects)
     return (
         <>
             <div className="card shadow p-3">
@@ -70,8 +70,8 @@ function MyProjects() {
 
                                 {/* <button className='btn'><i class="fa-solid fa-pen-to-square"></i></button> */}
                                 <EditProject project={project} />
-                                <a href={`${project.github}`} target='_blank' className='btn'><i class="fa-brands fa-github"></i></a>
-                                <button onClick={() => handleDelete(project._id)} className='btn'><i class="fa-solid fa-trash"></i></button>
+                                <a href={`${project.github}`} target='_blank' className='btn'><i className="fa-brands fa-github"></i></a>
+                                <button onClick={() => handleDelete(project._id)} className='btn'><i className="fa-solid fa-trash"></i></button>
                             </div>
                         </div>
 

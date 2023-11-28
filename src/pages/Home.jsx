@@ -17,7 +17,7 @@ function Home() {
             console.log(result.response.data);
         }
     }
-    console.log(homeProject);
+    // console.log(homeProject);
     useEffect(() => {
         if (sessionStorage.getItem("token")) {
             setIsLoggedIn(true)

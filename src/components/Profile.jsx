@@ -52,8 +52,8 @@ function Profile() {
                     sessionStorage.setItem("existingUser",JSON.stringify(res.data))
                 }else{
                     setOpen(!open)
-                    console.log(res);
-                    console.log(res.response.data);
+                    // console.log(res);
+                    // console.log(res.response.data);
                 }
             }else{
                 const reqHeader = {
@@ -68,7 +68,7 @@ function Profile() {
             <div className='card shadow p-5'>
                 <div className='d-flex justify-content-between'>
                     <h2>My Profile</h2>
-                    <button onClick={() => setOpen(!open)} className='btn btn-outline-info d-flex align-items-center' style={{ border: 'none', outline: 'none' }}><i class="fa-solid fa-angle-down"></i></button>
+                    <button onClick={() => setOpen(!open)} className='btn btn-outline-info d-flex align-items-center' style={{ border: 'none', outline: 'none' }}><i className="fa-solid fa-angle-down"></i></button>
                 </div>
                 <Collapse in={open}>
                     <div className='row justify-content-center mt-3'>
@@ -81,7 +81,7 @@ function Profile() {
                                 <img width={'200px'} src={preview ? preview : "https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt="Upload picture" />
 
                             }
-                            {console.log(existingImage)}
+                            
                         </label>
                         <div className="mt-3">
                             <input type="text" value={userProfile.github} onChange={e => setUserProfile(({ ...userProfile, github: e.target.value }))} className='form-control' placeholder='Github' />

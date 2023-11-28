@@ -24,7 +24,7 @@ function Auth({ register }) {
             toast.info("please fill the form completely!!!")
         } else {
             const result = await registerAPI(userData)
-            console.log(result);
+            // console.log(result);
             if (result.status === 200) {
                 toast.success(`${result.data.username} has registered succesfully!!!`)
                 setUserData({
@@ -33,7 +33,7 @@ function Auth({ register }) {
                 navigate('/login')
             } else {
                 toast.error(result.response.data)
-                console.log(result);
+                // console.log(result);
             }
         }
     }
@@ -65,7 +65,7 @@ function Auth({ register }) {
     return (
         <div style={{ width: '100%', height: '100vh' }} className='d-flex justify-content-center align-items-center'>
             <div className='w-75 container'>
-                <Link to={'/'} style={{ textDecoration: 'none', color: 'blue' }}><i class="fa-solid fa-arrow-left"></i>Back to Home</Link>
+                <Link to={'/'} style={{ textDecoration: 'none', color: 'blue' }}><i className="fa-solid fa-arrow-left"></i>Back to Home</Link>
                 <div className='card shadow p-5 bg-success'>
                     <div className='row align-items-center'>
                         <div className='col-lg-6'>
